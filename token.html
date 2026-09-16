@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPMods Key Generator</title>
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 80px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: #1a0020;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #9D46FF;
+        }
+        button {
+            background-color: #6200EE;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #7c4dff;
+        }
+        #keyDisplay {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #00ffcc;
+            font-weight: bold;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>DPMods Verification</h2>
+        <p>Get Key बटन पर क्लिक करके अपनी नई की प्राप्त करें:</p>
+        <button onclick="generateKey()">Get Key</button>
+        <div id="keyDisplay"></div>
+    </div>
+
+    <script>
+        function generateKey() {
+            // एक रैंडम यूनीक की जनरेट करने का तरीका
+            const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            let key = "DP-";
+            for (let i = 0; i < 8; i++) {
+                key += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            
+            // स्क्रीन पर की दिखाना
+            document.getElementById("keyDisplay").innerText = "Your Key: " + key;
+            
+            // ऑटोमैटिक क्लिपबोर्ड पर कॉपी करना
+            navigator.clipboard.writeText(key);
+        }
+    </script>
+
+</body>
+</html>
